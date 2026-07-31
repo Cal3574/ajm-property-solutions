@@ -3,7 +3,6 @@ import { BackToTop } from "./BackToTop";
 import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
 import { PageLoader } from "./PageLoader";
-import { PageTransition } from "./PageTransition";
 import { ScrollProgress } from "./ScrollProgress";
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
@@ -12,9 +11,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <PageLoader />
       <ScrollProgress />
       <Navbar />
-      <main className="min-h-screen pt-20">
-        <PageTransition>{children}</PageTransition>
-      </main>
+      <main className="min-h-screen pt-20">{children}</main>
       <Footer />
       <BackToTop />
     </MotionConfig>
