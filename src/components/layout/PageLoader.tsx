@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export function PageLoader() {
@@ -25,14 +26,22 @@ export function PageLoader() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-          <motion.span
-            className="font-heading text-sm tracking-[0.3em] text-accent uppercase"
-            initial={{ opacity: 0, letterSpacing: "0.1em" }}
-            animate={{ opacity: 1, letterSpacing: "0.3em" }}
+          <motion.div
+            className="relative flex items-center justify-center"
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            AJM
-          </motion.span>
+            <div className="absolute inset-0 -z-10 scale-[2.5] rounded-full bg-accent/40 blur-3xl" />
+            <Image
+              src="/ajm-logo-mark.png"
+              alt="AJM Property Solutions"
+              width={2220}
+              height={1257}
+              priority
+              className="h-16 w-auto drop-shadow-[0_0_35px_rgba(111,163,216,0.7)]"
+            />
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>
