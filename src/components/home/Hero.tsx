@@ -29,41 +29,21 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto w-full max-w-7xl px-6 lg:px-12">
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="text-sm tracking-[0.2em] text-accent uppercase"
-        >
+        <p className="text-sm tracking-[0.2em] text-accent uppercase">
           AJM Property Solutions
-        </motion.p>
+        </p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.05 }}
-          className="mt-4 max-w-3xl font-heading text-5xl font-bold leading-[1.05] text-foreground sm:text-6xl lg:text-7xl"
-        >
+        <h1 className="mt-4 max-w-3xl font-heading text-5xl font-bold leading-[1.05] text-foreground sm:text-6xl lg:text-7xl">
           Building Quality. Delivering Trust.
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-6 max-w-xl text-lg leading-relaxed text-foreground-muted"
-        >
+        <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground-muted">
           Established brickwork, masonry, and structural building
           specialists, bringing two decades of craftsmanship to every
           project in Wilmslow and beyond.
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
-        >
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
           <Link
             href="/contact"
             className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-medium tracking-wide text-background transition-transform hover:scale-[1.03]"
@@ -77,7 +57,7 @@ export function Hero() {
           >
             View Our Work
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
