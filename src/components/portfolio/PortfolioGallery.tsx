@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { ProjectCardMedia } from "@/components/portfolio/ProjectCardMedia";
 import { ProjectModal } from "@/components/portfolio/ProjectModal";
@@ -51,19 +50,15 @@ export function PortfolioGallery() {
       </div>
 
       <div className="mt-12 columns-1 gap-6 sm:columns-2 lg:columns-3">
-        {visibleProjects.map((project, index) => (
-          <motion.button
+        {visibleProjects.map((project) => (
+          <button
             key={project.id}
             type="button"
             onClick={() => setSelectedProject(project)}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5, delay: (index % 6) * 0.06 }}
             className="group relative mb-6 block w-full overflow-hidden break-inside-avoid text-left"
           >
             <ProjectCardMedia project={project} />
-          </motion.button>
+          </button>
         ))}
       </div>
 
