@@ -1,5 +1,6 @@
 import { MotionConfig } from "framer-motion";
 import { BackToTop } from "./BackToTop";
+import { FloatingWhatsApp } from "./FloatingWhatsApp";
 import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
 import { PageLoader } from "./PageLoader";
@@ -14,6 +15,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <main className="min-h-screen pt-20">{children}</main>
       <Footer />
       <BackToTop />
+      <FloatingWhatsApp />
     </MotionConfig>
   );
 }

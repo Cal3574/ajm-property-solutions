@@ -39,7 +39,7 @@ export function Hero() {
 
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground-muted">
           Established brickwork, masonry, and structural building
-          specialists, bringing two decades of craftsmanship to every
+          specialists, bringing over a decade of craftsmanship to every
           project in Wilmslow and beyond.
         </p>
 

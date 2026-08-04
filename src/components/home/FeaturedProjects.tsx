@@ -3,13 +3,10 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { HiOutlineArrowRight } from "react-icons/hi";
-import { ProjectCardMedia } from "@/components/portfolio/ProjectCardMedia";
-import { portfolioCategories, portfolioProjects } from "@/lib/portfolio";
+import { GalleryImageCard } from "@/components/portfolio/GalleryImageCard";
+import { galleryImages } from "@/lib/gallery";
 
-const featuredProjects = portfolioCategories.map(
-  (category) =>
-    portfolioProjects.find((project) => project.category === category)!,
-);
+const featuredImages = galleryImages.slice(0, 4);
 
 export function FeaturedProjects() {
   return (
@@ -33,9 +30,9 @@ export function FeaturedProjects() {
       </div>
 
       <div className="mt-12 columns-1 gap-6 sm:columns-2 lg:columns-4">
-        {featuredProjects.map((project, index) => (
+        {featuredImages.map((image, index) => (
           <motion.div
-            key={project.id}
+            key={image.id}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
@@ -46,7 +43,7 @@ export function FeaturedProjects() {
               href="/portfolio"
               className="group relative block w-full overflow-hidden"
             >
-              <ProjectCardMedia project={project} />
+              <GalleryImageCard image={image} />
             </Link>
           </motion.div>
         ))}

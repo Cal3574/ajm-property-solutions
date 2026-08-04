@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { HiOutlineClock, HiOutlineMail, HiOutlineLocationMarker, HiOutlinePhone } from "react-icons/hi";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { siteConfig } from "@/lib/site-config";
 
@@ -87,6 +87,23 @@ export default function ContactPage() {
                   className="text-lg text-foreground transition-colors hover:text-accent"
                 >
                   {siteConfig.whatsapp}
+                </a>
+              </div>
+            </li>
+
+            <li className="flex items-start gap-4">
+              <FaInstagram className="mt-1 shrink-0 text-2xl text-accent" />
+              <div>
+                <p className="text-sm tracking-wide text-foreground-muted">
+                  Instagram
+                </p>
+                <a
+                  href={siteConfig.instagramHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg text-foreground transition-colors hover:text-accent"
+                >
+                  @ajm_property_solutions
                 </a>
               </div>
             </li>

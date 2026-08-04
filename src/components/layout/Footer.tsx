@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { Logo } from "./Logo";
 import { navLinks, siteConfig } from "@/lib/site-config";
 
@@ -22,6 +22,15 @@ export function Footer() {
                 className="transition-colors hover:text-accent"
               >
                 <FaWhatsapp />
+              </a>
+              <a
+                href={siteConfig.instagramHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Instagram"
+                className="transition-colors hover:text-accent"
+              >
+                <FaInstagram />
               </a>
             </div>
           </div>

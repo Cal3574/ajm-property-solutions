@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site-config";
 
 const title = "About";
 const description =
-  "Twenty years of brickwork, masonry, and structural building experience serving Wilmslow and the surrounding area.";
+  "Over ten years of brickwork, masonry, and structural building experience serving Wilmslow and the surrounding area.";
 
 export const metadata: Metadata = {
   title,
@@ -55,13 +55,35 @@ export default function AboutPage() {
         </h2>
         <p className="mt-4 text-lg leading-relaxed text-foreground-muted">
           AJM Property Solutions was built on a simple idea: brickwork and
-          building work should be done properly, or not at all. For over
-          twenty years, we&apos;ve worked with homeowners across Wilmslow and
-          the surrounding area, bringing traditional craftsmanship to every
-          brickwork, masonry, structural, and general building project we
-          take on. Our mission is straightforward, to deliver work
-          we&apos;re proud to put our name to, carried out honestly,
-          reliably, and to the highest standard.
+          building work should be done properly, or not at all. What started
+          as a small team of dedicated tradespeople has grown, over more
+          than a decade, into one of the region&apos;s most trusted names
+          in brickwork, building, and property services, while our core
+          values have remained unchanged. Our mission is straightforward, to
+          deliver work we&apos;re proud to put our name to, carried out
+          honestly, reliably, and to the highest standard.
+        </p>
+        <p className="mt-4 text-lg leading-relaxed text-foreground-muted">
+          We&apos;ve completed hundreds of projects across Wilmslow and the
+          surrounding Cheshire and Manchester area, ranging from minor brick
+          repairs and repointing to full home extensions, loft conversions,
+          and large-scale commercial renovations. Our portfolio includes
+          work on period properties requiring specialist heritage
+          techniques, modern architectural builds demanding precision and
+          innovation, and everything in between. Whether you&apos;re a
+          homeowner looking to add value to your property or a business
+          owner planning a commercial refurbishment, we bring the same
+          level of expertise, attention to detail, and commitment to
+          excellence.
+        </p>
+        <p className="mt-4 text-lg leading-relaxed text-foreground-muted">
+          Our longevity in this competitive industry isn&apos;t by
+          accident. It&apos;s built on a foundation of quality workmanship,
+          honest communication, and a genuine dedication to customer
+          satisfaction. Many of our clients return to us for multiple
+          projects over the years, and a significant portion of our work
+          comes from personal recommendations, a testament to the trust
+          we&apos;ve earned and the relationships we&apos;ve built.
         </p>
       </section>
 

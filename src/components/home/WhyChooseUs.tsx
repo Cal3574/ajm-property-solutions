@@ -21,7 +21,7 @@ const reasons = [
     icon: HiOutlineUserGroup,
     title: "Experienced Team",
     description:
-      "Two decades of hands-on brickwork and building experience across every project we take on.",
+      "Over a decade of hands-on brickwork and building experience across every project we take on.",
   },
   {
     icon: HiOutlineSparkles,

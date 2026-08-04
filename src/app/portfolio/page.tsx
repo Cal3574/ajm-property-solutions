@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/site-config";
 
 const title = "Portfolio";
 const description =
-  "Browse our work across brickwork, masonry & repointing, structural alterations, and general building.";
+  "A gallery of our recent brickwork, renovation, and building projects.";
 
 export const metadata: Metadata = {
   title,
@@ -30,8 +30,8 @@ export default function PortfolioPage() {
           Our Portfolio
         </h1>
         <p className="mt-4 text-lg text-foreground-muted">
-          A look at the type of work we carry out, organised by category.
-          Filter to browse the kind of project relevant to you.
+          A gallery of recent projects, from brickwork and renovations to
+          full builds.
         </p>
       </div>
 

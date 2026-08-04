@@ -40,15 +40,15 @@ export const timeline = [
   {
     title: "Today",
     description:
-      "Two decades on, we've completed 250+ projects for 200+ happy customers, with the same standards we started with.",
+      "A decade on, we've completed 250+ projects for 200+ happy customers, with the same standards we started with.",
   },
 ];
 
 export const trustReasons = [
   {
-    title: "Twenty Years Local",
+    title: "Ten Years Local",
     description:
-      "Two decades working in and around Wilmslow, with a reputation built on finished work, not marketing claims.",
+      "Over a decade working in and around Wilmslow, with a reputation built on finished work, not marketing claims.",
   },
   {
     title: "Straightforward Communication",
