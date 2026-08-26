@@ -6,14 +6,14 @@ export type GalleryImage = {
   height: number;
 };
 
+export type Transformation = {
+  id: string;
+  title: string;
+  before: GalleryImage;
+  after: GalleryImage;
+};
+
 export const galleryImages: GalleryImage[] = [
-  {
-    id: "tudor-new-build-facade",
-    src: "/gallery/ajm-tudor-new-build-facade.jpeg",
-    alt: "Large detached new-build home with a tudor-style brick and black aluminium glazing facade",
-    width: 1080,
-    height: 1350,
-  },
   {
     id: "bathroom-renovation",
     src: "/gallery/ajm-bathroom-renovation.jpeg",
@@ -62,13 +62,6 @@ export const galleryImages: GalleryImage[] = [
     alt: "Porcelain-paved garden terrace with a built-in fire feature at dusk",
     width: 1320,
     height: 1604,
-  },
-  {
-    id: "oak-frame-house-driveway",
-    src: "/gallery/ajm-oak-frame-house-driveway.jpeg",
-    alt: "Oak-framed gable house viewed from the driveway with block paving in the foreground",
-    width: 1080,
-    height: 1350,
   },
   {
     id: "brick-house-front-garden",
@@ -132,5 +125,163 @@ export const galleryImages: GalleryImage[] = [
     alt: "Crittall-style glazed internal partition dividing a hallway from an open-plan living room",
     width: 1249,
     height: 2048,
+  },
+  {
+    id: "grey-gloss-kitchen-quartz-island",
+    src: "/gallery/ajm-grey-gloss-kitchen-quartz-island.jpeg",
+    alt: "Grey gloss handleless kitchen with a white quartz island, black pendant lights and integrated Bosch ovens",
+    width: 1320,
+    height: 1573,
+  },
+  {
+    id: "open-plan-kitchen-diner-extension",
+    src: "/gallery/ajm-open-plan-kitchen-diner-extension.jpeg",
+    alt: "Open-plan kitchen and dining extension with a flat rooflight and bi-fold doors onto the garden",
+    width: 1320,
+    height: 1565,
+  },
+  {
+    id: "kitchen-extension-roof-lantern",
+    src: "/gallery/ajm-kitchen-extension-roof-lantern.jpeg",
+    alt: "Kitchen extension lit by a large roof lantern, with a grey gloss kitchen and a black island with built-in wine fridge",
+    width: 1320,
+    height: 1577,
+  },
+  {
+    id: "grey-gloss-kitchen-extension",
+    src: "/gallery/ajm-grey-gloss-kitchen-extension.jpeg",
+    alt: "Grey gloss kitchen run with a white quartz waterfall island and under-cabinet lighting in a rear extension",
+    width: 1319,
+    height: 1563,
+  },
+  {
+    id: "crittall-glazed-room-divider",
+    src: "/gallery/ajm-crittall-glazed-room-divider.jpeg",
+    alt: "Black steel Crittall-style glazed screen dividing a living room from the hallway",
+    width: 1197,
+    height: 1436,
+  },
+  {
+    id: "crittall-glazed-double-doors",
+    src: "/gallery/ajm-crittall-glazed-double-doors.jpeg",
+    alt: "Black-framed Crittall-style glazed double doors leading through to a kitchen and dining room",
+    width: 1239,
+    height: 1483,
+  },
+  {
+    id: "crittall-glazed-partition-dining",
+    src: "/gallery/ajm-crittall-glazed-partition-dining.jpeg",
+    alt: "Full-height Crittall-style glazed partition separating a hallway from a dining room with countryside views",
+    width: 1012,
+    height: 1329,
+  },
+  {
+    id: "home-cinema-media-wall",
+    src: "/gallery/ajm-home-cinema-media-wall.jpeg",
+    alt: "Home cinema room with a large wall-mounted screen, electric fire and tiered grey velvet recliner seating",
+    width: 1320,
+    height: 1508,
+  },
+  {
+    id: "home-cinema-tiered-seating",
+    src: "/gallery/ajm-home-cinema-tiered-seating.jpeg",
+    alt: "Dark panelled home cinema in a loft with two tiers of grey velvet recliner sofas and wall lights",
+    width: 1320,
+    height: 1505,
+  },
+  {
+    id: "fitted-wardrobes-shaker-doors",
+    src: "/gallery/ajm-fitted-wardrobes-shaker-doors.jpeg",
+    alt: "Bespoke fitted wardrobes with shaker-style doors built into the eaves of a bedroom, primed ready for painting",
+    width: 1200,
+    height: 1600,
+  },
+  {
+    id: "fitted-wardrobes-carcass-shelving",
+    src: "/gallery/ajm-fitted-wardrobes-carcass-shelving.jpeg",
+    alt: "Bespoke fitted wardrobe carcasses with hanging rails and open shelving, before the doors are hung",
+    width: 1127,
+    height: 1395,
+  },
+  {
+    id: "fitted-wardrobes-carcass-install",
+    src: "/gallery/ajm-fitted-wardrobes-carcass-install.jpeg",
+    alt: "Carpenter fitting bespoke wardrobe carcasses to a bedroom wall with dust sheets down over the floor",
+    width: 1200,
+    height: 1600,
+  },
+  {
+    id: "rear-extension-groundworks",
+    src: "/gallery/ajm-rear-extension-groundworks.jpeg",
+    alt: "Rear of a house opened up for a single-storey extension, with foundation trenches dug and the existing slab exposed",
+    width: 1320,
+    height: 1583,
+  },
+  {
+    id: "rear-extension-steel-frame",
+    src: "/gallery/ajm-rear-extension-steel-frame.jpeg",
+    alt: "Steel beam frame installed across the rear of a house for a new extension, with a builder working from a ladder",
+    width: 1320,
+    height: 1577,
+  },
+  {
+    id: "rear-extension-brick-shell",
+    src: "/gallery/ajm-rear-extension-brick-shell.jpeg",
+    alt: "Brick and blockwork shell of a new single-storey rear extension, built up before the roof and glazing go on",
+    width: 1320,
+    height: 1449,
+  },
+  {
+    id: "loft-conversion-strip-out",
+    src: "/gallery/ajm-loft-conversion-strip-out.jpeg",
+    alt: "Loft stripped back to the joists and rafters at the start of a loft conversion, with an old fireplace still in place",
+    width: 1320,
+    height: 1496,
+  },
+  {
+    id: "loft-conversion-roof-structure",
+    src: "/gallery/ajm-loft-conversion-roof-structure.jpeg",
+    alt: "Loft conversion mid-build with the roof opened to the rafters and joiners framing new stud walls",
+    width: 1320,
+    height: 1635,
+  },
+];
+
+export const transformations: Transformation[] = [
+  {
+    id: "staircase",
+    title: "Oak staircase reimagined",
+    before: {
+      id: "staircase-before",
+      src: "/gallery/ajm-staircase-before.jpeg",
+      alt: "Dated oak staircase with a spindle balustrade and carpeted treads in a double-height hallway",
+      width: 900,
+      height: 1600,
+    },
+    after: {
+      id: "staircase-after",
+      src: "/gallery/ajm-staircase-after.jpeg",
+      alt: "The same hallway with a modern floating staircase, grey oak treads, a frameless glass balustrade and LED strip lighting",
+      width: 941,
+      height: 1672,
+    },
+  },
+  {
+    id: "house-exterior",
+    title: "Pebbledash to contemporary render",
+    before: {
+      id: "house-exterior-before",
+      src: "/gallery/ajm-house-exterior-before.jpeg",
+      alt: "Dated detached house with grey pebbledash render, white uPVC windows and a uPVC porch",
+      width: 1672,
+      height: 941,
+    },
+    after: {
+      id: "house-exterior-after",
+      src: "/gallery/ajm-house-exterior-after.jpeg",
+      alt: "The same house remodelled with smooth white render, black windows, a black slatted sliding gate and exterior uplighting",
+      width: 736,
+      height: 1600,
+    },
   },
 ];

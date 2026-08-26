@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PortfolioGallery } from "@/components/portfolio/PortfolioGallery";
+import { Transformations } from "@/components/portfolio/Transformations";
 import { siteConfig } from "@/lib/site-config";
 
 const title = "Portfolio";
@@ -35,7 +36,11 @@ export default function PortfolioPage() {
         </p>
       </div>
 
-      <div className="mt-12">
+      <div className="mt-16">
+        <Transformations />
+      </div>
+
+      <div className="mt-24">
         <PortfolioGallery />
       </div>
     </section>
