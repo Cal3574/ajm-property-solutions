@@ -106,13 +106,6 @@ export const galleryImages: GalleryImage[] = [
     height: 966,
   },
   {
-    id: "garden-decking-paving",
-    src: "/gallery/ajm-garden-decking-paving.jpeg",
-    alt: "Wide view of a rear garden with new composite decking and porcelain paving under construction",
-    width: 1200,
-    height: 1600,
-  },
-  {
     id: "porcelain-patio-installation",
     src: "/gallery/ajm-porcelain-patio-installation.jpeg",
     alt: "Large porcelain patio being laid with levelling spacers across the joints",
@@ -146,13 +139,6 @@ export const galleryImages: GalleryImage[] = [
     alt: "Kitchen extension lit by a large roof lantern, with a grey gloss kitchen and a black island with built-in wine fridge",
     width: 1320,
     height: 1577,
-  },
-  {
-    id: "grey-gloss-kitchen-extension",
-    src: "/gallery/ajm-grey-gloss-kitchen-extension.jpeg",
-    alt: "Grey gloss kitchen run with a white quartz waterfall island and under-cabinet lighting in a rear extension",
-    width: 1319,
-    height: 1563,
   },
   {
     id: "crittall-glazed-room-divider",
