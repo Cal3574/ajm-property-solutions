@@ -1,3 +1,4 @@
+import { BeforeAfter } from "@/components/home/BeforeAfter";
 import { CTA } from "@/components/home/CTA";
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
 import { Hero } from "@/components/home/Hero";
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesPreview />
       <WhyChooseUs />
       <FeaturedProjects />
+      <BeforeAfter />
       <Testimonials />
       <CTA />
     </>

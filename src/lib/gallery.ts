@@ -9,8 +9,8 @@ export type GalleryImage = {
 export type Transformation = {
   id: string;
   title: string;
-  before: GalleryImage;
-  after: GalleryImage;
+  before: GalleryImage[];
+  after: GalleryImage[];
 };
 
 export const galleryImages: GalleryImage[] = [
@@ -176,6 +176,20 @@ export const galleryImages: GalleryImage[] = [
     height: 1505,
   },
   {
+    id: "loft-conversion-strip-out",
+    src: "/gallery/ajm-loft-conversion-strip-out.jpeg",
+    alt: "Loft stripped back to the joists and rafters at the start of a loft conversion, with an old fireplace still in place",
+    width: 1320,
+    height: 1496,
+  },
+  {
+    id: "loft-conversion-roof-structure",
+    src: "/gallery/ajm-loft-conversion-roof-structure.jpeg",
+    alt: "Loft conversion mid-build with the roof opened to the rafters and joiners framing new stud walls",
+    width: 1320,
+    height: 1635,
+  },
+  {
     id: "fitted-wardrobes-shaker-doors",
     src: "/gallery/ajm-fitted-wardrobes-shaker-doors.jpeg",
     alt: "Bespoke fitted wardrobes with shaker-style doors built into the eaves of a bedroom, primed ready for painting",
@@ -217,57 +231,71 @@ export const galleryImages: GalleryImage[] = [
     width: 1320,
     height: 1449,
   },
-  {
-    id: "loft-conversion-strip-out",
-    src: "/gallery/ajm-loft-conversion-strip-out.jpeg",
-    alt: "Loft stripped back to the joists and rafters at the start of a loft conversion, with an old fireplace still in place",
-    width: 1320,
-    height: 1496,
-  },
-  {
-    id: "loft-conversion-roof-structure",
-    src: "/gallery/ajm-loft-conversion-roof-structure.jpeg",
-    alt: "Loft conversion mid-build with the roof opened to the rafters and joiners framing new stud walls",
-    width: 1320,
-    height: 1635,
-  },
 ];
+
+const galleryImage = (id: string): GalleryImage => {
+  const image = galleryImages.find((item) => item.id === id);
+  if (!image) {
+    throw new Error(`Unknown gallery image: ${id}`);
+  }
+  return image;
+};
 
 export const transformations: Transformation[] = [
   {
     id: "staircase",
     title: "Oak staircase reimagined",
-    before: {
-      id: "staircase-before",
-      src: "/gallery/ajm-staircase-before.jpeg",
-      alt: "Dated oak staircase with a spindle balustrade and carpeted treads in a double-height hallway",
-      width: 900,
-      height: 1600,
-    },
-    after: {
-      id: "staircase-after",
-      src: "/gallery/ajm-staircase-after.jpeg",
-      alt: "The same hallway with a modern floating staircase, grey oak treads, a frameless glass balustrade and LED strip lighting",
-      width: 941,
-      height: 1672,
-    },
+    before: [
+      {
+        id: "staircase-before",
+        src: "/gallery/ajm-staircase-before.jpeg",
+        alt: "Dated oak staircase with a spindle balustrade and carpeted treads in a double-height hallway",
+        width: 900,
+        height: 1600,
+      },
+    ],
+    after: [
+      {
+        id: "staircase-after",
+        src: "/gallery/ajm-staircase-after.jpeg",
+        alt: "The same hallway with a modern floating staircase, grey oak treads, a frameless glass balustrade and LED strip lighting",
+        width: 941,
+        height: 1672,
+      },
+    ],
   },
   {
     id: "house-exterior",
     title: "Pebbledash to contemporary render",
-    before: {
-      id: "house-exterior-before",
-      src: "/gallery/ajm-house-exterior-before.jpeg",
-      alt: "Dated detached house with grey pebbledash render, white uPVC windows and a uPVC porch",
-      width: 1672,
-      height: 941,
-    },
-    after: {
-      id: "house-exterior-after",
-      src: "/gallery/ajm-house-exterior-after.jpeg",
-      alt: "The same house remodelled with smooth white render, black windows, a black slatted sliding gate and exterior uplighting",
-      width: 736,
-      height: 1600,
-    },
+    before: [
+      {
+        id: "house-exterior-before",
+        src: "/gallery/ajm-house-exterior-before.jpeg",
+        alt: "Dated detached house with grey pebbledash render, white uPVC windows and a uPVC porch",
+        width: 1672,
+        height: 941,
+      },
+    ],
+    after: [
+      {
+        id: "house-exterior-after",
+        src: "/gallery/ajm-house-exterior-after.jpeg",
+        alt: "The same house remodelled with smooth white render, black windows, a black slatted sliding gate and exterior uplighting",
+        width: 736,
+        height: 1600,
+      },
+    ],
+  },
+  {
+    id: "loft-cinema",
+    title: "Loft conversion to home cinema",
+    before: [
+      galleryImage("loft-conversion-strip-out"),
+      galleryImage("loft-conversion-roof-structure"),
+    ],
+    after: [
+      galleryImage("home-cinema-media-wall"),
+      galleryImage("home-cinema-tiered-seating"),
+    ],
   },
 ];

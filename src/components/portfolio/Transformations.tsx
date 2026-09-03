@@ -6,10 +6,17 @@ import { useState } from "react";
 import { GalleryLightbox } from "@/components/portfolio/GalleryLightbox";
 import { transformations } from "@/lib/gallery";
 
-const lightboxImages = transformations.flatMap((item) => [
-  item.before,
-  item.after,
+const groups = transformations.map((item) => [
+  ...item.before.map((image) => ({ image, label: "Before" })),
+  ...item.after.map((image) => ({ image, label: "After" })),
 ]);
+
+const lightboxImages = groups.flat().map((entry) => entry.image);
+
+const startIndices = groups.reduce<number[]>((acc, group, index) => {
+  acc[index] = index === 0 ? 0 : acc[index - 1] + groups[index - 1].length;
+  return acc;
+}, []);
 
 export function Transformations() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -39,15 +46,15 @@ export function Transformations() {
             </h3>
 
             <div className="mt-6 grid gap-6 sm:grid-cols-2">
-              {[item.before, item.after].map((image, side) => (
+              {groups[itemIndex].map(({ image, label }, side) => (
                 <button
                   key={image.id}
                   type="button"
-                  onClick={() => setActiveIndex(itemIndex * 2 + side)}
+                  onClick={() => setActiveIndex(startIndices[itemIndex] + side)}
                   className="group relative block w-full overflow-hidden border border-border-hairline text-left"
                 >
                   <span className="absolute top-4 left-4 z-10 bg-background/80 px-3 py-1 text-xs tracking-[0.2em] text-foreground uppercase backdrop-blur-sm">
-                    {side === 0 ? "Before" : "After"}
+                    {label}
                   </span>
                   <Image
                     src={image.src}
